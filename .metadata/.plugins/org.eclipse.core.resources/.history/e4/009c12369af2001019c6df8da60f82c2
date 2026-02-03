@@ -1,0 +1,26 @@
+package com.zomato.order.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.zomato.order.dto.OrderDTO;
+import com.zomato.order.dto.OrderResponseDTO;
+import com.zomato.order.service.OrderService;
+
+@RestController
+@RequestMapping("/orders")
+public class OrderController {
+
+	@Autowired
+	private OrderService service;
+
+	@PostMapping("/place")
+	public OrderResponseDTO placeOrder(@RequestBody OrderDTO dto) {
+		return service.placeOrder(dto);
+	}
+
+	@PutMapping("/{id}/status")
+	public OrderResponseDTO updateStatus(@PathVariable Long id, @RequestParam String status) {
+		return service.updateOrderStatus(id, status);
+	}
+}
