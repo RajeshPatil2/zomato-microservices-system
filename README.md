@@ -1,10 +1,9 @@
-
 ZOMATO MICROSERVICES SYSTEM
 Spring Boot | Microservices Architecture
-========================================================
+================================================
 
 PROJECT OVERVIEW
---------------------------------------------------------
+-----------------------------------------------------
 This project is a real-time Food Delivery System developed 
 using Spring Boot and Microservices Architecture.
 
